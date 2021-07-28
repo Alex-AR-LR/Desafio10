@@ -1,0 +1,17 @@
+{
+  "name": "Proyecto-10-FrontEnd-Mentor",
+  "version": "1.0.0",
+  "description": "![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "purgecss": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "purgecss --css sass/custom.css --content index.html --output sass/styles-min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

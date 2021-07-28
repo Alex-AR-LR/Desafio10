@@ -1,0 +1,65 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$font-family-sans-serif: 'Karla', sans-serif;
+$green:   hsl(71, 73%, 54%);
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Create your own map
+$custom-colors: (
+//   //Primary
+    "Cyan": hsl(179, 62%, 43%),
+    "Bright-Yellow": hsl(71, 73%, 54%),
+    //netural
+    "Light-Gray": hsl(204, 43%, 93%),
+    "Grayish-Blue": hsl(218, 22%, 67%)
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/buttons";
+
+// 5. Add additional custom code here
+
+.fw-4{
+    font-weight: 400;
+}
+
+.fw-7{
+    font-weight: 700;
+}
+
+.fs-7{
+    font-size: .9rem;
+}
+
+.opacity-75{
+    opacity: .75;
+}
+
+.bg-light-cyan{
+    background-color: rgba($color: hsl(179, 62%, 43%), $alpha: .8);
+}
+
+.container-medio{
+    max-width: 629px;
+}
